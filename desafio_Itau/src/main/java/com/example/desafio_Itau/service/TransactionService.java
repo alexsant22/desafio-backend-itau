@@ -13,15 +13,15 @@ public class TransactionService {
 
     private final Queue<Transaction> transactions = new ConcurrentLinkedDeque<>();
 
-    void addTransaciton(Transaction transaction) {
+    public void addTransaciton(Transaction transaction) {
         transactions.add(transaction);
     }
 
-    void clearTransaction() {
+    public void clearTransaction() {
         transactions.clear();
     }
 
-    DoubleSummaryStatistics getStatistcs() {
+    public DoubleSummaryStatistics getStatistcs() {
         OffsetDateTime now = OffsetDateTime.now();
 
         return transactions.stream()

@@ -13,7 +13,7 @@ public class StatistcsResponse {
     private double min;
     private double max;
 
-    StatistcsResponse(DoubleSummaryStatistics stats) {
+     public StatistcsResponse(DoubleSummaryStatistics stats) {
         this.count = stats.getCount();
         this.sum = stats.getSum();
         this.avg = stats.getAverage();
